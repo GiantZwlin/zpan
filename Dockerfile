@@ -1,9 +1,9 @@
 FROM debian:10
 
 RUN echo \
-    deb http://mirrors.aliyun.com/debian buster main \
-    deb http://mirrors.aliyun.com/debian buster-updates main \
-    deb http://mirrors.aliyun.com/debian-security buster/updates main \
+    deb https://mirrors.aliyun.com/debian buster main \
+    deb https://mirrors.aliyun.com/debian buster-updates main \
+    deb https://mirrors.aliyun.com/debian-security buster/updates main \
     > /etc/apt/sources.list
 
 RUN apt-get update \
