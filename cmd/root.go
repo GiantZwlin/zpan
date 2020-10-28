@@ -73,5 +73,8 @@ func initConfig() {
 	// If a config file is found, read it in.
 	if err := viper.ReadInConfig(); err == nil {
 		fmt.Println("Using config file:", viper.ConfigFileUsed())
+	} else {
+		fmt.Printf("Can't find the config file, Please ensure there exist a config file in /etc/zpan/zpan.yml\nOr you can use --config to Specify one.\n")
+		os.Exit(1)
 	}
 }
